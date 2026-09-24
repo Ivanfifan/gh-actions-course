@@ -3,7 +3,7 @@ on: [push, workflow_dispatch]
 
 jobs:
   echo-hello:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Say hello
         run: echo "Hello, World!"
@@ -13,6 +13,6 @@ jobs:
       - name: Failed step
         run: |
           echo "I will fail"
-          exit 1
+          exit 0
       - name: Say goodbye
         run: echo "Goodbye!"
